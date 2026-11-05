@@ -1,0 +1,17 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/almoxarifado}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+  flyway:
+    enabled: true
+
+app:
+  cors-origins: ${CORS_ORIGINS:http://localhost:4200}
